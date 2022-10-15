@@ -1,5 +1,7 @@
+import Link from "next/link";
 import CoreModules from "./coreModules";
 import SectionContainer from "./sectionContainer";
+
 
 export default function Modules() {
     return (
@@ -27,7 +29,7 @@ export default function Modules() {
                         </div>
                         <h6 className="mb-2 font-semibold leading-5">CRM & Support</h6>
                         <p className="mb-3 text-sm text-gray-900">
-                            We choose to go to the moon, not because it's easy, but because it's
+                            We choose to go to the moon, not because its easy, but because its
                             hard.
                         </p>
                         <ul className="mb-4 -ml-1 space-y-2">
@@ -86,13 +88,14 @@ export default function Modules() {
                                 Humans
                             </li>
                         </ul>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                        >
-                            Learn more
-                        </a>
+                        <Link href="/" >
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            >
+                                Learn more
+                            </a>
+                        </Link>
                     </div>
                     <div>
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -123,7 +126,7 @@ export default function Modules() {
                         </div>
                         <h6 className="mb-2 font-semibold leading-5">HR & Payroll</h6>
                         <p className="mb-3 text-sm text-gray-900">
-                            There can be no thought of finishing for "aiming for the stars".
+                            There can be no thought of finishing for aiming for the stars.
                         </p>
                         <ul className="mb-4 -ml-1 space-y-2">
                             <li className="flex items-start">
@@ -181,13 +184,14 @@ export default function Modules() {
                                 Shrek
                             </li>
                         </ul>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                        >
-                            Learn more
-                        </a>
+                        <Link href="/" >
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            >
+                                Learn more
+                            </a>
+                        </Link>
                     </div>
                     <div>
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -283,13 +287,14 @@ export default function Modules() {
                                 Black Holes
                             </li>
                         </ul>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                        >
-                            Learn more
-                        </a>
+                        <Link href="/" >
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            >
+                                Learn more
+                            </a>
+                        </Link>
                     </div>
                     <div>
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -378,13 +383,14 @@ export default function Modules() {
                                 Run
                             </li>
                         </ul>
-                        <a
-                            href="/"
-                            aria-label=""
-                            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                        >
-                            Learn more
-                        </a>
+                        <Link href="/" >
+                            <a
+                                aria-label=""
+                                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                            >
+                                Learn more
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </SectionContainer>

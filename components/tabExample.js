@@ -70,11 +70,11 @@ export default function Example() {
                             key={category}
                             className={({ selected }) =>
                                 classNames(
-                                    'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-white',
+                                    'w-full rounded-lg py-2.5 mx-1 text-sm font-medium leading-5',
                                     
                                     selected
                                         ? 'text-white bg-deep-purple-accent-400 shadow'
-                                        : 'text-deep-purple-accent-400 hover:bg-white hover:text-deep-purple-accent-700'
+                                        : 'text-deep-purple-accent-400 hover:bg-gray-100 hover:text-deep-purple-accent-700'
                                 )
                             }
                         >

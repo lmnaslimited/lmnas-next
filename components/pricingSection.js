@@ -1,3 +1,4 @@
+import Link from "next/link"
 export default function PricingSection() {
 
     return (
@@ -15,12 +16,13 @@ export default function PricingSection() {
                     </div>
                 </div>
                 <div>
-                    <a
-                        href="/"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
-                    >
-                        Start for free
-                    </a>
+                    <Link href="/">
+                        <a
+                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
+                        >
+                            Start for free
+                        </a>
+                    </Link>
                     <p className="max-w-xs mt-6 text-xs text-gray-600 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
                         Sed ut unde omnis iste natus accusantium doloremque.
                     </p>
@@ -45,12 +47,13 @@ export default function PricingSection() {
                     </div>
                 </div>
                 <div>
-                    <a
-                        href="/"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                    >
-                        Buy Pro
-                    </a>
+                    <Link href="/">
+                        <a
+                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                        >
+                            Buy Pro
+                        </a>
+                    </Link>
                     <p className="max-w-xs mt-6 text-xs text-gray-600 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
                         Sed ut unde omnis iste natus accusantium doloremque.
                     </p>
@@ -70,12 +73,13 @@ export default function PricingSection() {
                     </div>
                 </div>
                 <div>
-                    <a
-                        href="/"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
-                    >
-                        Buy Business
-                    </a>
+                    <Link href="/">
+                        <a
+                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
+                        >
+                            Buy Business
+                        </a>
+                    </Link>
                     <p className="max-w-xs mt-6 text-xs text-gray-600 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
                         Sed ut unde omnis iste natus accusantium doloremque.
                     </p>

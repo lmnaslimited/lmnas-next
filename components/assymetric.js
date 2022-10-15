@@ -1,4 +1,4 @@
-import SectionContainer from "./sectionContainer";
+import Link from "next/link"
 
 export default function Assymetric() {
     return (
@@ -26,20 +26,22 @@ export default function Assymetric() {
                     <span className="text-xs font-semibold inline-block py-1 px-2  text-teal-900 uppercase rounded-full bg-teal-accent-400  last:mr-0 mr-2 mt-2">Assets</span>
                     <span className="text-xs font-semibold inline-block py-1 px-2  text-teal-900 uppercase rounded-full bg-teal-accent-400  last:mr-0 mr-2 mt-2">POS</span>
                 </div>
-                <a
-                    href="/"
-                    aria-label=""
-                    className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                >
-                    Learn more
-                    <svg
-                        className="inline-block w-3 ml-2"
-                        fill="currentColor"
-                        viewBox="0 0 12 12"
+                <Link href="/">
+                    <a
+
+                        aria-label=""
+                        className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
                     >
-                        <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
-                    </svg>
-                </a>
+                        Learn more
+                        <svg
+                            className="inline-block w-3 ml-2"
+                            fill="currentColor"
+                            viewBox="0 0 12 12"
+                        >
+                            <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
+                        </svg>
+                    </a>
+                </Link>
             </div>
             <div className="w-full md:w-5/12 px-16 md:px-4 mr-auto ml-auto ">
                 <div className="relative flex flex-col min-w-0 w-full mb-48 md:mb-6 mt-48 md:mt-0">
