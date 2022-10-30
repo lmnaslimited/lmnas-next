@@ -6,10 +6,10 @@ import Homeproducts from '../components/homeProducts'
 import Industries from '../components/industires'
 import Modules from '../components/modules'
 import { Nav } from '../components/nav'
-import Example from '../components/tabExample'
 import Pricing from '../components/views/pricing'
+import { getPricingData } from '../lib/api'
 
-export default function Home() {
+export default function Home({pricingData}) {
   return (
     <>
       <Nav />
@@ -18,8 +18,15 @@ export default function Home() {
       <Assymetric />
       <Modules />
       <Industries />
-      <Pricing/>
+      <Pricing pricingData={pricingData}/>
       <Footer />
     </>
   )
+}
+
+export async function getStaticProps() {
+  const pricingData = await getPricingData()
+  return {
+    props: { pricingData }
+  }
 }

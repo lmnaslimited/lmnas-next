@@ -5,8 +5,8 @@ import SectionHeader from "./sectionHeader"
 export default function Industries({ industries }) {
     return (
 
-        <SectionContainer>
-            <SectionHeader header={'Industries'} titleBegin={'World'} titleEnd={'Class Consulting'} subTitle={'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.'} />
+        <SectionContainer id={'industries'}>
+            <SectionHeader header={'Industries'} titleBegin={'World'} titleEnd={'Class Consulting'} subTitle={'We help turning your Industry smart with our Rich and Niche Consulting experience across funcions.'} />
 
             <div className="grid max-w-4xl gap-12 row-gap-10 mx-auto lg:grid-cols-2">
                 <div className="lg:max-w-md">
@@ -25,10 +25,9 @@ export default function Industries({ industries }) {
                             />
                         </svg>
                     </div>
-                    <h6 className="mb-3 text-xl font-bold leading-5">Manufacturing</h6>
+                    <h6 className="mb-3 text-xl font-bold leading-5">Smart Manufacturing</h6>
                     <p className="mb-6 text-sm text-gray-900">
-                        Lookout flogging bilge rat main sheet bilge water nipper fluke to go
-                        on account heave down clap of thunder.
+                        Turn your Industry smart, with highly automated manufacturing processes. LENS Smart Manufacturing is your path from paper-based processes to digital workflows and real-time visualization.
                     </p>
                     <div className="flex items-center mb-4">
                         <div className="mr-6">
@@ -81,10 +80,9 @@ export default function Industries({ industries }) {
                             />
                         </svg>
                     </div>
-                    <h6 className="mb-3 text-xl font-bold leading-5">Education</h6>
+                    <h6 className="mb-3 text-xl font-bold leading-5">Retail & Distribution</h6>
                     <p className="mb-6 text-sm text-gray-900">
-                        Webtwo ipsum orkut reddit meebo skype vimeo jajah spock empressr
-                        zimbra, mobly napster.
+                    Bring transparency among stakeholders on your Retail & Supply Chain. With LENS solutions optimise your planning, respond to change dynamically, execute smart logistics, and outperform customer excellence. Reduce your carbon footprint and support a Green supply chain.
                     </p>
                     <div className="grid grid-cols-2 grid-rows-2 gap-2 row-gap-2">
                         <li className="flex items-start">
@@ -103,7 +101,7 @@ export default function Industries({ industries }) {
                                     />
                                 </svg>
                             </span>
-                            Sed ut perspiciatis
+                            Multi-Store POS
                         </li>
                         <li className="flex items-start">
                             <span className="mr-1">
@@ -121,7 +119,7 @@ export default function Industries({ industries }) {
                                     />
                                 </svg>
                             </span>
-                            Blockchain thought
+                            Smart Logistics
                         </li>
                         <li className="flex items-start">
                             <span className="mr-1">
@@ -139,7 +137,7 @@ export default function Industries({ industries }) {
                                     />
                                 </svg>
                             </span>
-                            Augur could be
+                            AI Demand Planning
                         </li>
                         <li className="flex items-start">
                             <span className="mr-1">
@@ -157,7 +155,7 @@ export default function Industries({ industries }) {
                                     />
                                 </svg>
                             </span>
-                            A business big
+                            Versatile Integrations
                         </li>
                     </div>
                 </div>

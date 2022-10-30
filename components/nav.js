@@ -36,29 +36,29 @@ export const Nav = () => {
                     </Link>
                     <ul class="flex items-center hidden space-x-8 lg:flex">
                         <li>
-                            <Link href="/">
+                            <Link href="/#products">
                                 <a
                                     aria-label="Our product"
                                     title="Our product"
                                     class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                 >
-                                    Product
+                                    Products
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="/#industries">
                                 <a
                                     aria-label="Our product"
                                     title="Our product"
                                     class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                 >
-                                    Features
+                                    Industries
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="/#pricing   ">
                                 <a
                                     aria-label="Product pricing"
                                     title="Product pricing"

@@ -2,12 +2,13 @@ import { useState } from 'react'
 import { Tab } from '@headlessui/react'
 import SectionContainer from './sectionContainer'
 import PricingSection from './pricingSection'
+import { getPricingData } from '../lib/api'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Example({pricingData}) {
     let [categories] = useState({
         ERP: [
             {
@@ -58,8 +59,9 @@ export default function Example() {
             },
         ],
     })
-
+    
     return (
+
 
         <div className="  px-2 py-16 sm:px-0">
 
@@ -82,26 +84,27 @@ export default function Example() {
                         </Tab>
                     ))}
                 </Tab.List>
+
                 <Tab.Panels className="mt-2">
                     <div >
                         <Tab.Panel className={classNames(
                             ' py-8',
 
                         )}>
-                            <PricingSection />
+                            <PricingSection product={pricingData[0]} />
                         </Tab.Panel >
                     </div>
                     <Tab.Panel className={classNames(
                         'py-8',
 
                     )}>
-                        <PricingSection />
+                        <PricingSection  product={pricingData[1]}/>
                     </Tab.Panel>
                     <Tab.Panel className={classNames(
                         ' py-8',
 
                     )}>
-                        <PricingSection />
+                        <PricingSection product={pricingData[2]} />
                     </Tab.Panel>
                     {/** {Object.values(categories).map((posts, idx) => (
             <Tab.Panel
@@ -147,3 +150,4 @@ export default function Example() {
 
     )
 }
+
