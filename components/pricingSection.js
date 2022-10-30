@@ -10,7 +10,7 @@ export default function PricingSection({ product }) {
                     </div>
                     <div className="mt-2 space-y-3">
                         {product.plans[0].features.map((feature) => (
-                            <div className="text-gray-700">{feature}</div>
+                            <div key = {feature} className="text-gray-700">{feature}</div>
                         ))}
                     </div>
                 </div>
@@ -41,7 +41,7 @@ export default function PricingSection({ product }) {
                     </div>
                     <div className="mt-2 space-y-3">
                         {product.plans[1].features.map((feature) => (
-                            <div className="text-gray-700">{feature}</div>
+                            <div key={feature} className="text-gray-700">{feature}</div>
                         ))}
                     </div>
                 </div>
@@ -67,7 +67,7 @@ export default function PricingSection({ product }) {
                     </div>
                     <div className="mt-2 space-y-3">
                         {product.plans[2].features.map((feature) => (
-                            <div className="text-gray-700">{feature}</div>
+                            <div key={feature} className="text-gray-700">{feature}</div>
                         ))}
                     </div>
                 </div>
