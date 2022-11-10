@@ -12,14 +12,14 @@ import { getPricingData } from '../lib/api'
 export default function Home({pricingData}) {
   return (
     <>
-      <Nav />
+    
       <HeroMain />
       <Homeproducts />
       <Assymetric />
       <Modules />
       <Industries />
       <Pricing pricingData={pricingData}/>
-      <Footer />
+     
     </>
   )
 }

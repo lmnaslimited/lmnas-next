@@ -69,7 +69,7 @@ export const Nav = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="/about">
                                 <a
                                     aria-label="About us"
                                     title="About us"
