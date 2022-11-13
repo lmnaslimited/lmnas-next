@@ -1,4 +1,5 @@
 export default function HeroBackgroundWithCard({heroInfo}) {
+    console.log('heroinfo from herosection', heroInfo)
     return(
         <div>
             <section className="mb-40">

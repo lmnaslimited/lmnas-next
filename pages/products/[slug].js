@@ -1,6 +1,8 @@
 
 import SectionContainer from "../../components/sectionContainer";
+import CallOut from "../../components/views/callOut";
 import Feature2x2SubList from "../../components/views/feature2x2SubList";
+import Feature3x3 from "../../components/views/feature3x3";
 import FeatureWithSubList from "../../components/views/featureWithSubList";
 import HeroBackgroundWithCard from "../../components/views/heroBackgroundWithCard";
 import { getProductData, getAllProductSlug } from "../../lib/api"
@@ -10,12 +12,12 @@ const heroInfo = {
     cta1: 'Download Brochure',
     cta2: 'Book Demo'
 }
-export function FeatureBottomImage() {
+export function FeatureBottomImage({ feature = {} }) {
 
     return (
         <div className="text-center">
 
-            <h6 className="mb-2 font-semibold leading-5 mt-10">Sport</h6>
+            <h6 className="mb-2 font-semibold leading-5 mt-10">{feature.standout}</h6>
             <div className="flex items-center justify-center w-16 h-16 mx-auto mt-10 rounded-full bg-indigo-50 sm:w-24 sm:h-24">
                 <svg
                     className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16"
@@ -34,7 +36,8 @@ export function FeatureBottomImage() {
         </div>
     )
 }
-export function FetureCard() {
+export function FetureCard({ feature = {} }) {
+    console.log(feature.standout)
     return (
         <div className=" mt-12 text-center sm:px-0">
             <div className="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-12 sm:h-12">
@@ -53,68 +56,35 @@ export function FetureCard() {
                 </svg>
             </div>
             <h6 className="mb-2 text-sm font-bold leading-5 tracking-wider uppercase">
-                Truly International
+                {feature.standout}
             </h6>
             <div className="mb-2 text-gray-700">
-                Use in any of the 90+ Language
+                {feature.subTitle}
             </div>
             <div className="flex items-center justify-center my-4">
                 <ul className="mb-4 -ml-1 space-y-2">
-                    <li className="flex items-start">
-                        <span className="mr-1">
-                            <svg
-                                className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                                stroke="currentColor"
-                                viewBox="0 0 52 52"
-                            >
-                                <polygon
-                                    strokeWidth="4"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    fill="none"
-                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                />
-                            </svg>
-                        </span>
-                        Multi Lingual
-                    </li>
-                    <li className="flex items-start">
-                        <span className="mr-1">
-                            <svg
-                                className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                                stroke="currentColor"
-                                viewBox="0 0 52 52"
-                            >
-                                <polygon
-                                    strokeWidth="4"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    fill="none"
-                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                />
-                            </svg>
-                        </span>
-                        Multi Currency
-                    </li>
-                    <li className="flex items-start">
-                        <span className="mr-1">
-                            <svg
-                                className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                                stroke="currentColor"
-                                viewBox="0 0 52 52"
-                            >
-                                <polygon
-                                    strokeWidth="4"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    fill="none"
-                                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                                />
-                            </svg>
-                        </span>
-                        Multi UOM
-                    </li>
+                    {feature.usps.map((usp) => (
+                        <li key={usp} className="flex items-start">
+                            <span className="mr-1">
+                                <svg
+                                    className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                                    stroke="currentColor"
+                                    viewBox="0 0 52 52"
+                                >
+                                    <polygon
+                                        strokeWidth="4"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        fill="none"
+                                        points="29 13 14 29 25 29 23 39 38 23 27 23"
+                                    />
+                                </svg>
+                            </span>
+                            {usp}
+                        </li>
+                    ))}
                 </ul>
+
             </div>
         </div>
     )
@@ -124,8 +94,8 @@ export default function Products({ product, preview }) {
         <div>
             <HeroBackgroundWithCard heroInfo={product.hero} />
             <SectionContainer>
-                <div class="grid grid-rows-5 grid-cols-7 grid-flow-col gap-4">
-                    <div class="shadow-lg bg-gray-100 text-green-500 text-lg font-bold text-center p-10 rounded-lg row-start-1 row-end-6 col-span-3" >
+                <div class="grid grid-rows-1 lg:grid-rows-5  grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 lg:grid-flow-col gap-4">
+                    <div class="shadow-lg bg-gray-50  text-center p-10 rounded-lg lg:row-start-1  sm:col-span-4 lg:row-end-6 col-span-2 lg:col-span-3" >
 
                         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-16">
                             <div className="max-w-lg sm:text-center sm:mx-auto">
@@ -175,9 +145,9 @@ export default function Products({ product, preview }) {
                                                 height="24"
                                             />
                                         </svg>
-                                        <span className="relative bg-white">LENS Core</span>
+                                        <span className="relative">LENS Core</span>
                                     </span>{' '}
-                                    
+
                                 </h2>
                                 <p className="text-base text-gray-700 md:text-lg">
                                     By LMNAs
@@ -207,23 +177,44 @@ export default function Products({ product, preview }) {
                             </div>
                         </div>
                     </div>
-                    <div class="shadow-lg bg-gray-100   text-center rounded-lg row-end-4 row-span-3 col-span-2" >
-                        <FetureCard />
+                    <div class="shadow-lg bg-gray-50   text-center rounded-lg lg:row-span-3  col-span-2 " >
+                        <FetureCard feature={product.standouts[0]} />
+                    </div>
+                    <div class="shadow-lg bg-gray-100 rounded-lg  row-span-2 col-span-2">
+                        <FeatureBottomImage feature={product.standouts[1]} />
                     </div>
                     <div class="shadow-lg bg-gray-100 rounded-lg row-span-2 col-span-2">
-                        <FeatureBottomImage />
+                        <FeatureBottomImage feature={product.standouts[2]} />
                     </div>
-                    <div class="shadow-lg bg-gray-100 rounded-lg row-end-3 row-span-2 col-span-2">
-                        <FeatureBottomImage />
-                    </div>
-                    <div class="shadow-lg bg-gray-100 rounded-lg row-start-3 row-span-3 col-span-2">
-                        <FetureCard />
+                    <div class="shadow-lg bg-gray-50 rounded-lg lg:row-span-3  col-span-2">
+                        <FetureCard feature={product.standouts[3]} />
                     </div>
 
                 </div>
+
+
+
+
             </SectionContainer>
-            <Feature2x2SubList />
-            <FeatureWithSubList product />
+            <SectionContainer>
+                <Feature2x2SubList />
+            </SectionContainer>
+            <SectionContainer>
+                <CallOut />
+            </SectionContainer>
+            <section className="text-gray-600 body-font">
+                <div className="container px-5 py-24 mx-auto">
+                    <div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+                        <h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900">
+                            Slow-carb next level shoindxgoitch ethical authentic, scenester sriracha
+                            forage.
+                        </h1>
+                        <button className="flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">
+                            Button
+                        </button>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
