@@ -10,6 +10,9 @@ module.exports = {
       boxShadow: {
         outline: '0 0 0 3px rgba(101, 31, 255, 0.4)',
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       spacing: {
         '7': '1.75rem',
         '9': '2.25rem',

@@ -26,7 +26,7 @@ export default function Homeproducts({ products }) {
 
     <SectionContainer id={'products'}>
       <SectionHeader header={'LENS Product Suits'} titleBegin={'Cloud'} titleEnd={'Expereince Products for E2E Business'}
-        subTitle={'Win Competition, Sell ideas over products, With LENS fullfilment will be an experience for Your Partners'} />
+        subTitle={'Win Competition, Sell ideas over products, With LENS, fullfilment will be a memorable experience for Your Partners'} />
 
       <div className="grid gap-8 row-gap-5 md:row-gap-8 lg:grid-cols-3">
         <ProductCard step={'1'} slug={'digital-marketing'} title={'Idea 2 Market'} subTitle={'LMNAs Unified Marketing Platform(LUMP), A Real Time Digital Marketing Cloud.'} />
